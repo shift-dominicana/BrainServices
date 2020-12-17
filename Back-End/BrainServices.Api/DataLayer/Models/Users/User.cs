@@ -1,8 +1,9 @@
 ﻿using DataLayer.Models.Core;
+using DataLayer.Models.Roles;
 using System;
 using WebAPI.Utils.Enums;
 
-namespace DataLayer.Models.User
+namespace DataLayer.Models.Users
 {
     public class User : BaseModel
     {
@@ -26,6 +27,8 @@ namespace DataLayer.Models.User
         public String Telephone { get; set; }
 
         public String CellPhone { get; set; }
+
+        public Role Role { get; set; }
 
     }
 }

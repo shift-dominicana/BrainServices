@@ -1,11 +1,7 @@
-﻿using DataLayer.ContextExtension.Authors;
-using DataLayer.ContextExtension.Books;
-using DataLayer.ContextExtension.Genres;
+﻿using DataLayer.ContextExtension.Roles;
 using DataLayer.ContextExtension.Users;
-using DataLayer.Models.Authors;
-using DataLayer.Models.Books;
-using DataLayer.Models.Genres;
-using DataLayer.Models.User;
+using DataLayer.Models.Roles;
+using DataLayer.Models.Users;
 using Microsoft.EntityFrameworkCore;
 
 namespace DataLayer.Contexts
@@ -19,15 +15,11 @@ namespace DataLayer.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            //modelBuilder.ApplyConfiguration(new AuthorConfiguration());
-            //modelBuilder.ApplyConfiguration(new BooksConfiguration());
-            //modelBuilder.ApplyConfiguration(new GenresConfiguration());
             modelBuilder.ApplyConfiguration(new UserConfiguration());
+            modelBuilder.ApplyConfiguration(new RoleConfiguration());
         }
 
-        //public DbSet<Author> Authors { get; set; }
-        //public DbSet<Book> Books { get; set; }
-        //public DbSet<Genre> Genres { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Role> Roles { get; set; }
     }
 }

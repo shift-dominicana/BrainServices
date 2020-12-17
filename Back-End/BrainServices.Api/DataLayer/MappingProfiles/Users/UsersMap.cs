@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using DataLayer.Models.User;
+using DataLayer.Models.Users;
 using DataLayer.ViewModels.Users;
 using System;
 using System.Collections.Generic;
